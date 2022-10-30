@@ -22,8 +22,8 @@ function init() {
     } else {
       imgSource[1].src = 'assets/icons/volume-level-3.svg';
     }
-    volumeSlide.volume = event.target.value / 100;
-    console.log(volumeSlide.volume);
+    audioSource.volume = event.target.value / 100;
+    console.log(audioSource.volume);
   })
 
   var playButton = document.querySelector('button');
