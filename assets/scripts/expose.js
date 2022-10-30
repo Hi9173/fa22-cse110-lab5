@@ -26,13 +26,14 @@ function init() {
       imgSource[1].src = 'assets/icons/volume-level-3.svg';
     }
     audioSource.volume = event.target.value / 100;
-    console.log(audioSource.volume);
   })
 
   var playButton = document.querySelector('button');
   playButton.addEventListener('click', function() {
     if (imgSource[0].src == 'assets/images/party-horn.svg') {
-      jsConfetti.addConfetti()
+      jsConfetti.addConfetti({
+        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+      })
       jsConfetti.clearCanvas()
     }
     audioSource.play();
