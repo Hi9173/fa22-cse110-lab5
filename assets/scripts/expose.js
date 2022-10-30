@@ -32,7 +32,6 @@ function init() {
   playButton.addEventListener('click', function() {
     if (imgSource[0].src == 'https://hi9173.github.io/fa22-cse110-lab5/assets/images/party-horn.svg') {
       jsConfetti.addConfetti()
-      jsConfetti.clearCanvas()
     }
     audioSource.play();
   })
