@@ -27,6 +27,6 @@ function init() {
 
   var playButton = document.querySelector('button');
   playButton.addEventListener('click', function() {
-    playButton.play();
+    audioSource.play();
   })
 }
