@@ -15,6 +15,13 @@ function init() {
   volumeSlide.addEventListener('input', (event) => {
     if (event.target.value == 0) {
       imgSource[1].src = 'assets/icons/volume-level-0.svg';
+    } else if (event.target.value >= 1 && event.target.value < 33) {
+      imgSource[1].src = 'assets/icons/volume-level-1.svg';
+    } else if (event.target.value >= 33 && event.target.value < 67) {
+      imgSource[1].src = 'assets/icons/volume-level-2.svg';
+    } else {
+      imgSource[1].src = 'assets/icons/volume-level-3.svg';
     }
+    
   })
 }
