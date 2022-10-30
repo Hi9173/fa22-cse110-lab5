@@ -7,5 +7,6 @@ function init() {
   var imgSource = document.querySelectorAll('img');
   hornSelect.addEventListener('change', function() {
     imgSource[0]='/assets/images/car-horn.svg';
+    console.log(imgSource[0]);
   })
 }
