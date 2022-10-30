@@ -24,4 +24,9 @@ function init() {
     }
     volumeSlide.volume = event.target.value / 100;
   })
+
+  var playButton = document.querySelector('button');
+  playButton.addEventListener('click', function() {
+    playButton.play();
+  })
 }
