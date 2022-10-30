@@ -3,6 +3,9 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
+  const jsConfetti = new JSConfetti();
+  
+  
   var hornSelect = document.getElementById('horn-select');
   var imgSource = document.querySelectorAll('img');
   var audioSource = document.querySelector('audio');
@@ -28,6 +31,10 @@ function init() {
 
   var playButton = document.querySelector('button');
   playButton.addEventListener('click', function() {
+    if (imgSource[0].src == 'assets/images/party-horn.svg') {
+      jsConfetti.addConfetti()
+      jsConfetti.clearCanvas()
+    }
     audioSource.play();
   })
 }
