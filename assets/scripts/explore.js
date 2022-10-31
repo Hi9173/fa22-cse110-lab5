@@ -20,12 +20,18 @@ function init() {
     }
   }
   populateVoiceList();
+  if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = populateVoiceList;
+  }
 
   const button = document.querySelector('button');
+  const img = document.querySelector('img');
   button.addEventListener('click', function() {
     const input = document.getElementById('text-to-speak');
     const utterThis = new SpeechSynthesisUtterance(input.value);
-  speechSynthesis.speak(utterThis);
+    img.src = 'assets/images/smiling-open.png';
+    speechSynthesis.speak(utterThis);
+    img.src = 'assets/images/smiling.png';
   })
 
 }
