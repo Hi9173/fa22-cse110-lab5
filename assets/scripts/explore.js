@@ -32,6 +32,7 @@ function init() {
     img.src = 'assets/images/smiling-open.png';
     speechSynthesis.speak(utterThis);
     img.src = 'assets/images/smiling.png';
+    input.blur();
   })
 
 }
