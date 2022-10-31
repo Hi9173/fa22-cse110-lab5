@@ -3,17 +3,17 @@
 window.addEventListener('DOMContentLoaded', init);
 
 function init() {
-  const synth = window.speechSynthesis;
-  const inputTxt = document.querySelector('#text-to-speak');
-  const voiceSelect = document.querySelector('select');
-  const voices = [];
-  const img = document.querySelector('img');
+  var synth = window.speechSynthesis;
+  var inputTxt = document.querySelector('#text-to-speak');
+  var voiceSelect = document.querySelector('select');
+  var voices = [];
+  var img = document.querySelector('img');
 
   function populateVoiceList() {
     voices = synth.getVoices();
   
     for (let i = 0; i < voices.length ; i++) {
-      const option = document.createElement('option');
+      var option = document.createElement('option');
       option.textContent = `${voices[i].name} (${voices[i].lang})`;
   
       if (voices[i].default) {
@@ -30,10 +30,10 @@ function init() {
     speechSynthesis.onvoiceschanged = populateVoiceList;
   }
 
-  const button = document.querySelector('button');
+  var button = document.querySelector('button');
   button.addEventListener('click', function() {
-    const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-    const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+    var utterThis = new SpeechSynthesisUtterance(inputTxt.value);
+    var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
     for (let i = 0; i < voices.length ; i++) {
       if (voices[i].name === selectedOption) {
         utterThis.voice = voices[i];
