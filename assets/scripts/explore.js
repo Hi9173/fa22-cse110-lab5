@@ -20,7 +20,7 @@ function init() {
   
       option.setAttribute('data-lang', voices[i].lang);
       option.setAttribute('data-name', voices[i].name);
-      document.getElementById("voiceSelect").appendChild(option);
+      document.getElementById("voice-select").appendChild(option);
     }
   }
   
